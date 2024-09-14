@@ -1,30 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import Input from "../../components/input";
-import axios from "axios";
-import { IRecipe } from "../../types/types";
 import RecipeCard from "../../components/recipeCard";
+import useRecipe from "../../hooks/useRecipes";
+import UserContext from "../../context/userContext";
 
 const HomePage = () => {
   const [searchRecipe, setSearchRecipe] = useState<string>("");
-  const [recipes, setRecipes] = useState<IRecipe[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  useEffect(() => {
-    const getRecipe = async () => {
-      const baseGetUrl = "http://localhost:3001/recipes/page/1";
-      setIsLoading(true);
-      const response = await axios.get(baseGetUrl);
-      setRecipes(response.data.recipes);
-      setIsLoading(false);
-    };
-    getRecipe();
-  }, []);
-
+  const { isLoading, recipes } = useRecipe();
+  const { user } = useContext(UserContext);
   if (isLoading) {
     return null;
   }
 
   return (
     <div>
+      <p>{`Bem vindo, ${user.name}`}</p>
       <h1>Encontre as melhores receitas</h1>
       <Input
         setValue={setSearchRecipe}
