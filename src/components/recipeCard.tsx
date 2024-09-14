@@ -1,10 +1,9 @@
+import { BASE_IMAGE_URL } from "../constants";
 import { IRecipe } from "../types/types";
 
 type RecipeCardProp = {
   recipe: IRecipe;
 };
-
-const BASE_IMAGE_URL = "http://localhost:3001/images/";
 
 const RecipeCard = ({ recipe }: RecipeCardProp) => {
   return (
