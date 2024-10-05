@@ -1,12 +1,13 @@
 import Button from "../../components/button";
 import Input from "../../components/input";
 import useUser from "../../hooks/useUser";
+import "./login.css";
 
 const LoginPage = () => {
   const { email, setEmail, password, setPassword, handleLogin } = useUser();
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="loginForm">
+      <h1>Login</h1>
       <Input
         type="email"
         placeholder="Email"
