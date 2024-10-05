@@ -1,0 +1,35 @@
+body {
+  background-image: url("https://estoyhechouncocinillas.com/wp-content/uploads/2023/03/paella-de-marisco.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+.registerForm {
+  background-color: #887242;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 0.5rem;
+}
+
+input {
+  background-color: #d9b5af;
+  border-color: #e8d6d3;
+  border-radius: 0.7rem;
+  color: #ffffff;
+}
+
+button {
+  background-color: #6e3027;
+  border-radius: 1rem;
+  color: #ffffff;
+}

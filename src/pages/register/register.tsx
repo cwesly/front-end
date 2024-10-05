@@ -1,6 +1,7 @@
 import Input from "../../components/input";
 import Button from "../../components/button";
 import useUser from "../../hooks/useUser";
+import "./register.css";
 
 const Register = () => {
   const {
@@ -14,7 +15,8 @@ const Register = () => {
   } = useUser();
 
   return (
-    <div>
+    <div className="registerForm">
+      <h1>Register</h1>
       <Input placeholder="Name" type="text" setValue={setName} value={name} />
       <Input
         placeholder="Email"
