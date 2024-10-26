@@ -30,6 +30,7 @@ const Register = () => {
         setValue={setPassword}
         value={password}
       />
+      <a href="/">Faça login</a>
       <Button title="Register" onClick={handleSubmit} />
     </div>
   );
