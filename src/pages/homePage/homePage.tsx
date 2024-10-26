@@ -23,7 +23,7 @@ const HomePage = () => {
         placeholder="Search recipes"
       />
       {recipes.map((recipe) => (
-        <RecipeCard recipe={recipe} />
+        <RecipeCard key={recipe.ID} recipe={recipe} />
       ))}
     </div>
   );
