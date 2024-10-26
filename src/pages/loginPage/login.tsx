@@ -20,6 +20,7 @@ const LoginPage = () => {
         setValue={setPassword}
         value={password}
       />
+      <a href="/register">Registre-se</a>
       <Button title="Login" onClick={handleLogin} />
     </div>
   );
