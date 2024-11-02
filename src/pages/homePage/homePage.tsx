@@ -1,13 +1,26 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Input from "../../components/input";
 import RecipeCard from "../../components/recipeCard";
 import useRecipe from "../../hooks/useRecipes";
 import UserContext from "../../context/userContext";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [searchRecipe, setSearchRecipe] = useState<string>("");
+  const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const localStorageUser =
+      JSON.parse(localStorage.getItem("user") as string) || {};
+
+    if (!user.token && !localStorageUser.token) {
+      navigate("/");
+    }
+    setUser(localStorageUser);
+  }, []);
+
   const { isLoading, recipes } = useRecipe();
-  const { user } = useContext(UserContext);
   if (isLoading) {
     return null;
   }
