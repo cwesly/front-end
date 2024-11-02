@@ -3,6 +3,7 @@ import UserContext from "./context/userContext";
 import router from "./routes/routes";
 import { useState } from "react";
 import { User } from "./types/types";
+import FavoriteProvider from "./context/favoriteProvider";
 
 function App() {
   const [user, setUser] = useState<User>({
@@ -17,7 +18,9 @@ function App() {
   };
   return (
     <UserContext.Provider value={initialState}>
-      <RouterProvider router={router} />
+      <FavoriteProvider>
+        <RouterProvider router={router} />
+      </FavoriteProvider>
     </UserContext.Provider>
   );
 }
