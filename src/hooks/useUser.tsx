@@ -17,6 +17,7 @@ const useUser = () => {
     try {
       const response = await axios.post(loginUrl, data);
       setUser(response.data as User);
+      localStorage.setItem("user", JSON.stringify(response.data));
       navigate("/home");
     } catch (error) {
       console.error(error);
