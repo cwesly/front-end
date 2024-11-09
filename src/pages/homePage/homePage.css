@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffdbd1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.header {
+  color: #3a0b01;
+}
+
+.welcome-text {
+  color: #666;
+}
+
+.input-field {
+  background-color: #ffdbd1;
+  color: #3a0b01;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: #8f4c37;
+  outline: none;
+  box-shadow: 0 0 0.3125rem rgba(143, 76, 55, 0.5);
+}
+
+.recipe-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.recipe-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.625rem;
+  padding: 0.9375rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.recipe-card:hover {
+  transform: translateY(-0.3125rem);
+}
+
+.recipe-card img {
+  max-width: 100%;
+  border-radius: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+.recipe-card p {
+  color: #3a0b01;
+  font-size: 1.2rem;
+  margin-bottom: 0.625rem;
+}
+
+.favorite-checkbox {
+  margin-bottom: 0.625rem;
+}
+
+.recipe-card button {
+  background-color: #8f4c37;
+  color: #ffffff;
+  border-radius: 0.3125rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recipe-card button:hover {
+  background-color: #7a3b2e;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.pagination-button {
+  margin: 0 0.625rem;
+  padding: 0.625rem 0.9375rem;
+  border: none;
+  background-color: #8f4c37;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #7a3b2e;
+}
+
+.pagination-text {
+  margin: 0 0.625rem;
+  color: #666;
+}
