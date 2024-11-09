@@ -1,0 +1,47 @@
+.recipe-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe-card p {
+  color: #3a0b01;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.favorite-checkbox {
+  margin-bottom: 10px;
+}
+
+.recipe-card button {
+  background-color: #8f4c37;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recipe-card button:hover {
+  background-color: #7a3b2e;
+}

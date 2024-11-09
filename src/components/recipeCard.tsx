@@ -5,6 +5,7 @@ import FavoriteCheckbox from "./favoriteCheckbox";
 import { useContext, useEffect, useState } from "react";
 import useFavorite from "../hooks/useFavorites";
 import FavoritesContext from "../context/favoritesContext";
+import "./RecipeCard.css";
 
 type RecipeCardProp = {
   recipe: IRecipe;
@@ -40,10 +41,14 @@ const RecipeCard = ({ recipe }: RecipeCardProp) => {
   }, [favorites]);
 
   return (
-    <div>
-      <img src={`${BASE_IMAGE_URL}${recipe.image}.jpg`} alt="recipe"></img>
+    <div className="recipe-card">
+      <img src={`${BASE_IMAGE_URL}${recipe.image}.jpg`} alt="recipe" />
       <p>{recipe.title}</p>
-      <FavoriteCheckbox checked={isFavorite} setChecked={handleFavorite} />
+      <FavoriteCheckbox
+        checked={isFavorite}
+        setChecked={handleFavorite}
+        className="favorite-checkbox"
+      />
       <button onClick={handleClick}>Details</button>
     </div>
   );
