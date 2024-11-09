@@ -17,21 +17,29 @@ const Register = () => {
   return (
     <div className="registerForm">
       <h1>Register</h1>
-      <Input placeholder="Name" type="text" setValue={setName} value={name} />
+      <Input
+        placeholder="Name"
+        type="text"
+        setValue={setName}
+        value={name}
+        className="input-field"
+      />
       <Input
         placeholder="Email"
         type="email"
         setValue={setEmail}
         value={email}
+        className="input-field"
       />
       <Input
         type="password"
         placeholder="Senha"
         setValue={setPassword}
         value={password}
+        className="input-field"
       />
-      <a href="/">Faça login</a>
-      <Button title="Register" onClick={handleSubmit} />
+      <a href="/">Do Login</a>
+      <Button title="Register" onClick={handleSubmit} className="button" />
     </div>
   );
 };
