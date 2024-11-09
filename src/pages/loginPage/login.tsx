@@ -13,15 +13,17 @@ const LoginPage = () => {
         placeholder="Email"
         setValue={setEmail}
         value={email}
+        className="input-field"
       />
       <Input
         type="password"
         placeholder="Senha"
         setValue={setPassword}
         value={password}
+        className="input-field"
       />
-      <a href="/register">Registre-se</a>
-      <Button title="Login" onClick={handleLogin} />
+      <a href="/register">Do Register</a>
+      <Button title="Login" onClick={handleLogin} className="button" />
     </div>
   );
 };
