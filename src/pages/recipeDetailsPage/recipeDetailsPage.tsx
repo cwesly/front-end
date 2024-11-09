@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useRecipeDetails from "../../hooks/useRecipeDetails";
 import { BASE_IMAGE_URL } from "../../constants";
+import "./recipeDetailsPage.css";
 
 const RecipeDetails = () => {
   const { id } = useParams();
@@ -8,19 +9,23 @@ const RecipeDetails = () => {
   const { title, image, ingredients, instructions } = recipe;
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <img src={`${BASE_IMAGE_URL}${image}.jpg`} alt="recipe image" />
-      <h2>Ingredients</h2>
-      {ingredients.map((ingredient) => {
-        return (
+    <div className="container">
+      <h1 className="header">{title}</h1>
+      <img
+        className="recipe-image"
+        src={`${BASE_IMAGE_URL}${image}.jpg`}
+        alt="recipe image"
+      />
+      <h2 className="subheader">Ingredients</h2>
+      <div className="ingredients-list">
+        {ingredients.map((ingredient) => (
           <ul key={ingredient.ID}>
-            <li>{`=> ${ingredient.name.replace("", "")}`}</li>
+            <li>{`=> ${ingredient.name}`}</li>
           </ul>
-        );
-      })}
-      <h2>Instructions</h2>
-      <p>{instructions}</p>
+        ))}
+      </div>
+      <h2 className="subheader">Instructions</h2>
+      <p className="instructions">{instructions}</p>
     </div>
   );
 };
